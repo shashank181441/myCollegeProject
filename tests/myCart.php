@@ -22,6 +22,7 @@
     <div class="col col-6">
       <table class="table col col-6">
         <?php
+        $total = 0;
         foreach ($_SESSION["products"] as $products) {
           echo "hello";
           if ($products['id'] != $prevID) {
@@ -30,14 +31,18 @@
         <tbody>
           <tr>
             <th scope="row"><?php echo $products['food_name']; ?></th>
-            <td><?php echo $products['food_price']; ?>
+            <td><?php echo $products['food_price']; 
+            $total+=$products['food_price'];?>
             </td>
           </tr>
         </tbody><?php 
     $prevID = $products['id'];}?>
+    
       </table>
     </div>
     <?php
+    echo "total = ".$total;
+
     ?>
 </body>
 </html>
