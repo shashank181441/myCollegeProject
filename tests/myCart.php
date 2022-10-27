@@ -23,6 +23,17 @@
       <table class="table col col-6">
         <?php
         $total = 0;
+        $prevID = $_SESSION["products"]["id"];
+        // //
+        // /
+        // /
+        // /
+        // //
+
+        // /
+        // /
+        // //
+
         foreach ($_SESSION["products"] as $products) {
           echo "hello";
           if ($products['id'] != $prevID) {
@@ -47,9 +58,7 @@
 </body>
 </html>
 <?php
-print_r($_SESSION["products"]);
-// print_r($_SESSION);
-echo "helo";
+// print_r($_SESSION["products"]);
 // session_destroy();
 ?>
 <a href="tables.php">tables</a>
